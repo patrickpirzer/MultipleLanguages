@@ -1,0 +1,65 @@
+﻿<Window x:Class="MultipleLanguages.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MultipleLanguages"
+        xmlns:mlres="clr-namespace:MultipleLanguages.Properties"
+        mc:Ignorable="d"
+        Title="{x:Static mlres:Resources.mainwindowtitle}"
+        Height="350"
+        Width="525">
+    
+    <Grid x:Name="grd_mainpanel">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="grd_persondatapanel"
+              Grid.Row="0"
+              Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   Content="{x:Static mlres:Resources.firstname}"
+                   Margin="5"></Label>
+
+            <Label Grid.Row="1"
+                   Grid.Column="0"
+                   Content="{x:Static mlres:Resources.lastname}"
+                   Margin="5"></Label>
+        </Grid>
+
+        <WrapPanel x:Name="wrp_buttonpanel"
+                   Grid.Row="1"
+                   Grid.Column="0">
+            <!--Test to get values from the resources-->
+            <Button x:Name="btn_testresource"
+                    Margin="5"
+                    Click="btn_testresource_Click">Test</Button>
+            <!--Switch to language german-->
+            <Button x:Name="btn_switchtogerman"
+                    Margin="5"
+                    Click="btn_switchtogerman_Click"
+                    Content="{x:Static mlres:Resources.switchtogerman}"></Button>
+            <!--Switch to language english-->
+            <Button x:Name="btn_switchtoenglish"
+                    Margin="5"
+                    Click="btn_switchtoenglish_Click"
+                    Content="{x:Static mlres:Resources.switchtoenglish}"></Button>
+        </WrapPanel>
+    </Grid>
+    
+</Window>

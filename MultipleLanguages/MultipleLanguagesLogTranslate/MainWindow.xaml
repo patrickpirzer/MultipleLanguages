@@ -1,0 +1,86 @@
+﻿<Window x:Class="MultipleLanguagesLogTranslate.MainWindow"
+        x:Name="Root"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:loc="http://schemas.tomer.com/winfx/2006/xaml/presentation"
+        xmlns:loc2="clr-namespace:Localization;assembly=Localization"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MultipleLanguagesLogTranslate"
+        mc:Ignorable="d"
+        loc2:TranslateExtension.Uid="0"
+        Title="{loc2:Translate}"
+        Height="350"
+        Width="525">
+
+    <Grid x:Name="grd_mainpanel">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="grd_persondatapanel"
+              Grid.Row="0"
+              Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   loc2:TranslateExtension.Uid="1"
+                   Content="{loc2:Translate}"
+                   Margin="5"></Label>
+
+            <TextBox Grid.Row="0"
+                     Grid.Column="1"
+                     loc2:TranslateExtension.Uid="5"
+                     Text="{loc2:Translate}"
+                     Margin="5"></TextBox>
+
+            <Label Grid.Row="1"
+                   Grid.Column="0"
+                   loc2:TranslateExtension.Uid="2"
+                   Content="{loc2:Translate}"
+                   Margin="5"></Label>
+
+            <TextBox Grid.Row="1"
+                     Grid.Column="1"
+                     loc2:TranslateExtension.Uid="6"
+                     Text="{loc2:Translate}"
+                     Margin="5"></TextBox>
+        </Grid>
+
+        <WrapPanel x:Name="wrp_buttonpanel"
+                   Grid.Row="1"
+                   Grid.Column="0" HorizontalAlignment="Right" Width="517">
+            <!--Switches to language german-->
+            <Button x:Name="btn_switchtogerman"
+                    Margin="5"
+                    Click="btn_switchtogerman_Click"
+                    loc2:TranslateExtension.Uid="3"
+                    Content="{loc2:Translate}"></Button>
+            
+            <!--Switches to language english-->
+            <Button x:Name="btn_switchtoenglish"
+                    Margin="5"
+                    Click="btn_switchtoenglish_Click"
+                    loc2:TranslateExtension.Uid="4"
+                    Content="{loc2:Translate}"></Button>
+            
+            <!--Loads another window-->
+            <Button x:Name="btn_loadWindow"
+                    Margin="5"
+                    Click="btn_loadWindow_Click">Window 2</Button>
+        </WrapPanel>
+    </Grid>
+
+</Window>

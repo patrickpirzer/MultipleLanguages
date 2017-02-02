@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Dictionary EnglishName="German" CultureName="German" Culture="de-DE">
+  <!--Title of the window-->
+  <Value Id="0" Title="My window" />
+  <!--Content for label firstname-->
+  <Value Id="1" Content="First name" />
+  <!--Content for label lastname-->
+  <Value Id="2" Content="Last name" />
+  <!--Content for button switchToGerman-->
+  <Value Id="3" Content="German" />
+  <!--Content for button switchToEnglish-->
+  <Value Id="4" Content="English" />
+  <!--Text for textbox txt_firstname-->
+  <Value Id="5" Text="Patrick" />
+  <!--Text for textbox txt_lastname-->
+  <Value Id="6" Text="Pirzer" />
+
+  <Value Id="10" Title="My Window 2" />
+</Dictionary>
